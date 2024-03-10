@@ -30,11 +30,13 @@ body {
     "navbar" 100px
     "main" 
     "footer"100px;
-
+  }
+    .logo2 {
+        display: none;
+    }
     .logo {
         background-image: url('ImagenesBakery/L4_mobile.png'); /* cambia la imagen del logo para dispositivos móviles */
-    }  
- }
+    }
 }
 /* Estilos para el header */
 .header {
@@ -45,7 +47,7 @@ body {
 
 
 /* Estilos para la imagen dentro del header */
-.header img {
+.header div img {
     width: 100%;
     height: auto;
     object-fit: cover;
