@@ -210,6 +210,9 @@ body {
             "footer footer" 100px /
             200px auto;
     }
+    #logo {
+        display: none;
+    }
 }
 
 @media (min-width:992px) {
@@ -220,4 +223,7 @@ body {
             "footer footer footer" auto /
             100px auto auto;
     }
+   #logo {
+    display: none;
+   }
 }
