@@ -21,8 +21,8 @@ body {
 }
 
 /*Antes del cambio*/
-
-.grid-container {
+@media (max-width:768px) {
+ .grid-container {
     display: grid;
     gap: 10px;
     grid-template:
@@ -33,10 +33,9 @@ body {
 
     #logo {
         background-image: url('ImagenesBakery/L4_mobile.png'); /* cambia la imagen del logo para dispositivos móviles */
-    }
-    
+    }  
+ }
 }
-
 /* Estilos para el header */
 .header {
     grid-area: header;
