@@ -31,6 +31,10 @@ body {
     "main" 
     "footer"100px;
 
+    #logo {
+        background-image: url('ImagenesBakery/L4_mobile.png'); /* cambia la imagen del logo para dispositivos móviles */
+    }
+    
 }
 
 /* Estilos para el header */
@@ -46,6 +50,16 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+#logo {
+      display: block;
+      width: 100%; /* ajusta el tamaño según necesites */
+      height: auto;
+      margin: 0 auto; /* centra el logo */
+     /* background-image: url('imagen_a.jpg'); imagen predeterminada para desktop */
+      background-size: contain; /* ajusta el tamaño de la imagen para que quepa dentro del contenedor */
+      background-repeat: no-repeat; /* evita que la imagen se repita */
 }
 
 
