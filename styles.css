@@ -31,7 +31,7 @@ body {
     "main" 
     "footer"100px;
 
-    #logo {
+    .logo {
         background-image: url('ImagenesBakery/L4_mobile.png'); /* cambia la imagen del logo para dispositivos móviles */
     }  
  }
@@ -51,7 +51,7 @@ body {
     object-fit: cover;
 }
 
-#logo {
+.logo {
       display: block;
       width: 100%; /* ajusta el tamaño según necesites */
       height: auto;
@@ -210,7 +210,7 @@ body {
             "footer footer" 100px /
             200px auto;
     }
-    #logo {
+    .logo {
         display: none;
     }
 }
@@ -223,7 +223,7 @@ body {
             "footer footer footer" auto /
             100px auto auto;
     }
-   #logo {
+   .logo {
     display: none;
    }
 }
