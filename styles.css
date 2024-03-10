@@ -1,0 +1,210 @@
+* { /*El * es el selector general*/
+    box-sizing: border-box; /*Retira los bordes que vienen por defecto*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+    min-height: 100vh; /*La altura de 100vh es para que abarque el 100% de toda la pantalla del explorador. VH significa viewport height (altura del dispositivo). También funciona como porcentaje, especificar 10vh es equivalente a ocupar 10% de la altura visible de la pantalla.*/
+    padding: 10px;
+    background-color: #fafafa;
+    letter-spacing: 0.1em;
+}
+
+.grid-container > * {
+    border-radius: 10px;
+    padding: 10px;
+    /*text-align: center;*/
+    font-weight: 500;
+}
+
+/*Antes del cambio*/
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template:
+    "header" 100px
+    "navbar" 100px
+    "main" 
+    "footer"100px;
+
+}
+
+/* Estilos para el header */
+.header {
+    grid-area: header;
+    place-items: center;
+    background-color: #fafafa;
+}
+
+
+/* Estilos para la imagen dentro del header */
+.header img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Estilos para la barra de navegación */
+.navbar {
+    grid-area: navbar;
+    background-color: #fafafa;
+}
+
+.navbar ul {
+    display: flex;
+    height: 100%;
+}
+
+.navbar ul li {
+    align-items: center;
+    justify-content: start;
+    list-style-type: none;
+    margin: 2vw;
+}
+
+/* Estilos para los enlaces en la barra de navegación */
+.navbar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: #E2D9CF;
+}
+
+/* Estilos para el main */
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto; /* Dos filas de altura automática */
+    grid-template-columns: 1fr; /* Una columna que ocupa todo el ancho */
+    background-color: #f5f5f5;
+}
+
+/*Antes*/
+ 
+/* La imagen ocupa la primera fila */
+/*
+.image-container {
+    grid-row: 1;
+} */
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-block img {
+    max-width: 100%;
+    height: auto; /* Mantener la proporción de aspecto de la imagen */
+}
+
+.content-container {
+    grid-row: 2; /* El contenido en dos bloques ocupa la segunda fila */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de ancho igual */
+}
+
+.content-block {
+    border: 0.1vw solid #ccc;
+    padding: 10px;
+    max-width: 100%; /* Establecer un ancho máximo */
+    overflow: hidden;
+    position: relative; /* Añadido para permitir el posicionamiento relativo */
+    box-sizing: border-box;
+}
+
+.description {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    width: 25vw;
+    height: 60vh;
+    border: 0.1vw solid #333;
+    border-radius: 1vw; /*10px;*/
+    text-align: center;
+    font-family: "IM Fell English", serif;
+}
+
+.bloquedecolor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    width: 20vw;
+    height: 50vh;
+    background-color: #f5f5f5;
+    border-radius: 1vw; /*10px;*/
+    padding: 10%; /*30px;*/
+}
+
+/*
+    width: 20vw;
+    height: 50vh;
+    width: 300px;
+    height: 300px;
+
+
+.description {
+    background-image: url(/ImagenesBakery/Filas/Borcelle.png);
+    padding: 0px 108px;
+}
+
+.bloquedecolor {
+    background-color: rgba(226, 217, 207, 0.79);
+    height: 100%;
+}
+
+.description p {
+    background-color: pink;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100%;
+
+}
+*/
+/*Antes*/
+/*
+.image-container-2 {} */
+
+/* Estilos para el footer */
+.footer {
+    grid-area: footer;
+    background-color: #fafafa;
+}
+
+.image-container-2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media queries para diseños responsivos */
+@media (min-width:768px) {
+    .grid-container {
+        grid-template:
+            "header navbar" 50px
+            "header navbar" 50px
+            "main main" auto
+            "footer footer" 100px /
+            200px auto;
+    }
+}
+
+@media (min-width:992px) {
+    .grid-container {
+        grid-template:
+            "header navbar navbar" 100px
+            "main main main" auto
+            "footer footer footer" auto /
+            100px auto auto;
+    }
+}
